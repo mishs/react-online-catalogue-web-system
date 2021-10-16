@@ -1,0 +1,126 @@
+.App {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: fit-content;
+  height: 100%;
+}
+
+/* Global styles */
+.app_content{
+  width: 1264px;
+  margin: 0 auto;
+  padding: 117px 0;
+}
+.tab-content-b{
+  margin-bottom: 60px;
+}
+.search-header{
+  margin-bottom: 70px;
+  flex-wrap: wrap;
+}
+.deal-details-left{
+  width: 645px;
+}
+.deal-details-right{
+  width: 460px;
+}
+.font-2xl{
+  font-size: 48px;
+}
+.font-xl{
+  font-size: 28px;
+}
+.font-lg{
+  font-size: 24px;
+}
+.font-md{
+  font-size: 20px;
+}
+.font-sm{
+  font-size: 18px;
+}
+.font-xs{
+  font-size: 16px;
+}
+.font-100{
+  font-weight: 400;
+}
+.font-200{
+  font-weight: 500;
+}
+.font-300{
+  font-weight: 700;
+}
+.font-400{
+  font-weight: 400;
+}
+.font-500{
+  font-weight: 500;
+}
+.font-600{
+  font-weight: 700;
+}
+.font-700{
+  font-weight: 700;
+}
+.font-800{
+  font-weight: 700;
+}
+.font-900{
+  font-weight: 700;
+}
+.display-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.h-center{
+  justify-content: center;
+}
+.h-between{
+  justify-content: space-between;
+}
+.v-center{
+  align-items: center;
+}
+
+@media(max-width: 1300px){
+  .deal-details-left{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .deal-details-right{
+    width: 100%;
+  }
+}
+
+@media (max-width:1264px){
+  .app_content{
+    width: 94%;
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+}
+
+@media(max-width: 768px){
+  .search-header{
+    flex-direction: column;
+  }
+
+  .search-header h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+}
