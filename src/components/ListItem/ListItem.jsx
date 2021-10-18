@@ -13,27 +13,27 @@ const ListItemStyles = styled.div`
   display: flex;
   flex-direction: column;
 
-  .prices_container{
-      margin: 10px 0 20px 0;
+  .prices_container {
+    margin: 10px 0 20px 0;
   }
-  button{
-      margin-top: auto;
+  button {
+    margin-top: auto;
   }
 `;
 
 function ListItem(props) {
-    const history = useHistory()
+  const history = useHistory();
   return (
     <ListItemStyles>
       <h4 className="font-700 font-xl">{props.title}</h4>
       <Prices {...props} />
       <Button
-      onClick={
-          ()=>{
-            history.push("/deal/" + props.id)
-          }
-      }
-      >View More</Button>
+        onClick={() => {
+          history.push("/deal/" + props.id);
+        }}
+      >
+        View More
+      </Button>
     </ListItemStyles>
   );
 }

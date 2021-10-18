@@ -13,12 +13,12 @@ const CheckBoxStyles = styled.label`
   -ms-user-select: none;
   user-select: none;
 
-  &>span{
-      min-width: 110px;
+  & > span {
+    min-width: 110px;
   }
 
   & input:checked ~ div .checkmark:after {
-    display: block!important;
+    display: block !important;
   }
 
   & > div {

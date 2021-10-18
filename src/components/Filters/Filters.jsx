@@ -13,19 +13,22 @@ const FiltersStyles = styled.div`
 `;
 
 function Filters(props) {
-    const context = useContext(DealsContext)
-    const {filters,applyFilter} = context
+  const context = useContext(DealsContext);
+  const { filters, applyFilter } = context;
 
-    return (
+  return (
     <FiltersStyles>
       <div className="filter tab-content-b">
         {filters && filters.length
-          ? filters.map((filter,index) => {
+          ? filters.map((filter, index) => {
               return (
                 <React.Fragment key={index}>
-                  <CheckBox title={filter.title} onChange={e=>{
-                      applyFilter(e.target.checked,index)
-                  }} />
+                  <CheckBox
+                    title={filter.title}
+                    onChange={(e) => {
+                      applyFilter(e.target.checked, index);
+                    }}
+                  />
                 </React.Fragment>
               );
             })

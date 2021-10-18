@@ -3,8 +3,7 @@ import styled from "styled-components";
 import down from "../../assets/icons/downIcon.png";
 
 const TabStyles = styled.div`
-
-.tab-detail{
+  .tab-detail {
     margin-bottom: 50px;
     .tab-title {
       color: #2c2738;
@@ -12,7 +11,7 @@ const TabStyles = styled.div`
     img {
       cursor: pointer;
     }
-}
+  }
   .tab-content {
     overflow: hidden;
     max-height: 0;

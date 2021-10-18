@@ -1,5 +1,5 @@
 import { mount, configure } from "enzyme";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import DealsContext from "./DealsContext";
 import DealsState from "./DealsState";
 import Adapter from "enzyme-adapter-react-16";
@@ -9,12 +9,12 @@ import { render, fireEvent } from "@testing-library/react";
 describe("API call", () => {
   it("deals data", () => {
     const TestComponent = () => {
-      const { applyFilter,filters } = useContext(DealsContext);
-    
+      const { applyFilter, filters } = useContext(DealsContext);
+
       return (
         <div>
-            <div data-testid="value">{filters[0].checked.toString()}</div>
-          <button data-testid="check" onClick={()=> applyFilter(true,0)}>check</button>
+          <div data-testid="value">{filters[0].checked.toString()}</div>
+          <button data-testid="check" onClick={() => applyFilter(true, 0)}>check</button>
         </div>
       );
     };
@@ -27,6 +27,6 @@ describe("API call", () => {
 
     expect(queryByTestId("value").textContent).toEqual("false")
     fireEvent.click(queryByTestId("check"))
-    expect(queryByTestId("value").textContent).toEqual("true")    
+    expect(queryByTestId("value").textContent).toEqual("true")
   });
 });

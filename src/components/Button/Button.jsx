@@ -13,12 +13,16 @@ const ButtonStyles = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #2C2738;
+  color: #2c2738;
   cursor: pointer;
 `;
 
 function Button(props) {
-  return <ButtonStyles className="font-xs font-500" {...props}>{props.children}</ButtonStyles>;
+  return (
+    <ButtonStyles className="font-xs font-500" {...props}>
+      {props.children}
+    </ButtonStyles>
+  );
 }
 
 export default Button;
